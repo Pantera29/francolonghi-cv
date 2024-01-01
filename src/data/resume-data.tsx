@@ -43,6 +43,24 @@ export const RESUME_DATA = {
       start: "2014",
       end: "2017",
     },
+    {
+      school: "Digital House",
+      degree: "Data Science & Machine Learning",
+      start: "2020",
+      end: "2020",
+    },
+    {
+      school: "Digital House",
+      degree: "Full Stack Software Development",
+      start: "2021",
+      end: "2021",
+    },
+    {
+      school: "Coderhouse",
+      degree: "UX/UI",
+      start: "2022",
+      end: "2022",
+    },
   ],
   work: [
     {
