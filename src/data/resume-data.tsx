@@ -144,6 +144,19 @@ export const RESUME_DATA = {
       },
     },
     {
+      title: "Compara Tasas",
+      techStack: [
+        "Side Project",
+        "Javascript",
+        "Cloudflare Workers",
+      ],
+      description: "Un comparador de rendimientos de plazos fijos, cuentas remuneradas y stablecoins.",
+      link: {
+        label: "comparatasas.ar",
+        href: "https://comparatasas.ar/",
+      },
+    },
+    {
       title: "Cedears.ar",
       techStack: [
         "Side Project",
