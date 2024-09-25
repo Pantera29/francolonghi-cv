@@ -169,16 +169,28 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Breathing Exercises",
+      title: "Fonditos",
       techStack: [
-        "Side Project",
-        "Cloudflare Workers",
-        "JS"
+        "Shadcn",
+        "Nex.js",
+        "Cloudflare Workers"
       ],
-      description: "Una herramienta simple para ejercitar la respiracion conciente. Como experimento de SEO.",
+      description: "Una herramienta simple para analizar fondos de inversión.",
       link: {
-        label: "https://breathingexercises.xyz/",
-        href: "https://breathingexercises.xyz/",
+        label: "https://fonditos.xyz/",
+        href: "https://fonditos.xyz/",
+      },
+    },
+    {
+      title: "Info BCRA",
+      techStack: [
+        "Shadcn",
+        "Nex.js",
+      ],
+      description: "Una interfaz para interacturar con los datos del BCRA.",
+      link: {
+        label: "https://info-bcra.xyz/",
+        href: "https://info-bcra.xyz/",
       },
     },
   ],
