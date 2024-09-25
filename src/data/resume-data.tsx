@@ -159,8 +159,9 @@ export const RESUME_DATA = {
     {
       title: "Cedears.ar",
       techStack: [
-        "Side Project",
-        "Svelte.js",
+        "Google Sheets",
+        "Shadcn",
+        "Next.js"
       ],
       description: "Un sitio en donde conocer los cedears que cotizan en el mercado y hacer un seguimiento de tu portfolio.",
       link: {
