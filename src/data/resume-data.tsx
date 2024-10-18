@@ -68,7 +68,7 @@ export const RESUME_DATA = {
       badges: ["Product"],
       title: "Head of Product",
       start: "2024",
-      end: "Presente",
+      end: "2024",
       description: [
         'Transformamos un exchange en una app de ahorro e inversiones multi asset class. Algunos logros:',
         '↪ Duplicamos la cantidad de activos y blockchains soportados en 1 año.',
