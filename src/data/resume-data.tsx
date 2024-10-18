@@ -112,7 +112,7 @@ export const RESUME_DATA = {
       title: "Growth Analyst",
       start: "2017",
       end: "2019",
-      description: "Automatizacion de los flujos de ventas b2b con web scrapping, armado de reportes automatico y cold emailing.",
+      description: "Generacion de leads para la venta de servicios de influencer marketing mediante automatizacion de pipelines con web scrapping, armado de reportes automatico y cold emailing.",
     },
     {
       company: "iBillionaire",
