@@ -83,7 +83,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "2023",
       description:
-        'Lidere el dominio de "pricing and incentives" de cinco equipos a cargo de las promociones, descuentos, comisiones y propinas de la plataforma en todo latam.',
+        'Lidere el dominio de "pricing and incentives" de cinco equipos, a cargo de las promociones, descuentos, comisiones y propinas de la plataforma en todo latam.',
     },
     {
       company: "belo",
@@ -93,7 +93,7 @@ export const RESUME_DATA = {
       start: "2021",
       end: "2022",
       description:
-        "Lidere el equipos de producto y UX para la wallet, exchange y tarjeta.",
+        "Lidere el equipo de producto y UX para la wallet, exchange y tarjeta.",
     },
     {
       company: "Mercado Pago",
