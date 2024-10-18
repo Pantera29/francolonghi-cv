@@ -103,7 +103,7 @@ export const RESUME_DATA = {
       start: "2019",
       end: "2021",
       description:
-        "Product Manager de los productos de asset management, con mas de 22 millones de latinoamericanos invertidos entre Argentina, Brasil y Mexico.",
+        "Product Manager de los productos de inversion y ahorro de Mercado Pago, con mas de 22 millones de latinoamericanos invertidos entre Argentina, Brasil y Mexico.",
     },
     {
       company: "Media Lab",
