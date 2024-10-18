@@ -1,6 +1,5 @@
-
 import {
-  AmbitLogo,
+  // AmbitLogo, // Removed unused import
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
@@ -70,8 +69,11 @@ export const RESUME_DATA = {
       title: "Head of Product",
       start: "2024",
       end: "Presente",
-      description:
-        'Construyendo la mejor app de ahorro e inversiones de latam.',
+      description: [
+        'Transformamos un exchange en una app de ahorro e inversiones multi asset class. Algunos logros:',
+        '↪ Duplicamos la cantidad de activos y blockchains soportados en 1 año.',
+        '↪ Lanzamos acciones e ETFs abriendole a usuarios de tres paises cuentas de inversión en EEUU.',
+        '↪ Lanzamos nuevas rampas en Peru, Colombia y Estados Unidos para onboardear mas personas a crypto e inversiones.' ],
     },
     {
       company: "Pedidos Ya",

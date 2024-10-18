@@ -115,7 +115,15 @@ export default function Page() {
                   </h4>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">
-                  {work.description}
+                  {Array.isArray(work.description) ? (
+                    work.description.map((paragraph, index) => (
+                      <p key={index} className="mb-2">
+                        {paragraph}
+                      </p>
+                    ))
+                  ) : (
+                    <p>{work.description}</p>
+                  )}
                 </CardContent>
               </Card>
             );
