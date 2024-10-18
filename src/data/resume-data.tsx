@@ -130,6 +130,11 @@ export const RESUME_DATA = {
     "Svelte.js",
     "Figma",
     "SQL",
+    "Next.js",
+    "Tailwind",
+    "Shadcn",
+    "Git",
+    "Cloudflare Workers",
   ],
   projects: [
     {
