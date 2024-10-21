@@ -201,5 +201,17 @@ export const RESUME_DATA = {
         href: "https://info-bcra.xyz/",
       },
     },
+    {
+      title: "Dividendos",
+      techStack: [
+        "Shadcn",
+        "Nex.js",
+      ],
+      description: "Una interfaz para ver las próximas empresas en pagar dividendos.",
+      link: {
+        label: "https://dividendos.xyz/",
+        href: "https://dividendos.xyz/",
+      },
+    },
   ],
 } as const;
