@@ -213,5 +213,18 @@ export const RESUME_DATA = {
         href: "https://dividendos.xyz/",
       },
     },
+    {
+      title: "Vinitos",
+      techStack: [
+        "Shadcn",
+        "Nex.js",
+        "Supabase",
+      ],
+      description: "Una pagina para descrubrir y reseñar bodegas y experiencias enoturisticas.",
+      link: {
+        label: "https://vinitos.ar/",
+        href: "https://vinitos.ar/",
+      },
+    },
   ],
 } as const;
