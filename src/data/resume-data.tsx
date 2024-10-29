@@ -144,7 +144,7 @@ export const RESUME_DATA = {
         "Javascript",
         "Cloudflare Workers",
       ],
-      description: "Un solo lugar en donde comparar todas las opciones para comprar y tener tus USDC, USDT y Bitcoins.",
+      description: "Un solo lugar en donde comparar las cotizaciones de distintos exchanges.",
       link: {
         label: "usdc.ar",
         href: "https://usdc.ar/",
