@@ -207,7 +207,7 @@ export const RESUME_DATA = {
         "Shadcn",
         "Nex.js",
       ],
-      description: "Una interfaz para ver las próximas empresas en pagar dividendos.",
+      description: "Una interfaz para ver las fechas de pagos de dividendos.",
       link: {
         label: "https://dividendos.xyz/",
         href: "https://dividendos.xyz/",
