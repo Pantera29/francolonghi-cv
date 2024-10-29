@@ -140,7 +140,7 @@ export default function Page() {
                       {education.school}
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
+                      {education.start === education.end ? education.start : `${education.start} - ${education.end}`}
                     </div>
                   </div>
                 </CardHeader>
