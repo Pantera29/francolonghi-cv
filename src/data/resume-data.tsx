@@ -140,9 +140,8 @@ export const RESUME_DATA = {
     {
       title: "USDC.AR",
       techStack: [
-        "Side Project",
-        "Javascript",
-        "Cloudflare Workers",
+        "Next.js",
+        "Shadcn",
       ],
       description: "Un solo lugar en donde comparar las cotizaciones de distintos exchanges.",
       link: {
@@ -153,8 +152,7 @@ export const RESUME_DATA = {
     {
       title: "Compara Tasas",
       techStack: [
-        "Side Project",
-        "Javascript",
+        "Astro",
         "Cloudflare Workers",
       ],
       description: "Un comparador de rendimientos de plazos fijos, cuentas remuneradas y stablecoins.",
