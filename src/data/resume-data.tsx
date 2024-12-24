@@ -10,7 +10,7 @@ export const RESUME_DATA = {
   location: "Buenos Aires, Argentina",
   locationLink: "https://www.google.com/maps/place/Buenos+Aires/",
   about:
-    "Contruyo productos digitales. En mi trabajo y en mi tiempo libre",
+    "Construyo productos digitales. En mi trabajo y en mi tiempo libre",
   summary:
     "Llevo muchos años co-creando productos digitales. Desde side projects chicos con un par de visitas al mes, a productos de inversion usados por 22 millones de latinoamericanos. En el camino aprendi lo basico de diseño y programación para poder llevar a la realidad las ideas que tengo.",
   avatarUrl: "https://pbs.twimg.com/profile_images/1523984386340831233/jSlYyvDj_400x400.jpg",
