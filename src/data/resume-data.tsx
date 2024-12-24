@@ -63,6 +63,16 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "Ripio",
+      link: "https://ripio.com",
+      badges: ["Product"],
+      title: "Head of Product b2b",
+      start: "2024",
+      end: "2024",
+      description:
+        'Construyendo la infraestructura para que cualquier banco o fintech pueda ofrecer crypto a sus clientes. Algunos de los clientes con los que trabajamos son Mercado Pago, Coinbase e Invertir Online.',
+    },
+    {
       company: "Buenbit",
       link: "https://buenbit.com",
       badges: ["Product"],
