@@ -174,7 +174,7 @@ export const RESUME_DATA = {
     {
       title: "Cedears.ar",
       techStack: [
-        "Google Sheets",
+        "Cloudflare Workers",
         "Shadcn",
         "Next.js"
       ],
@@ -182,6 +182,19 @@ export const RESUME_DATA = {
       link: {
         label: "cedears.ar",
         href: "https://cedears.ar/",
+      },
+    },
+    {
+      title: "Comparapix.ar",
+      techStack: [
+        "Next.js",
+        "Shadcn",
+        "Cloudflare Workers"
+      ],
+      description: "Una plataforma para comparar las cotizaciones de ARS/BRL de distintas apps.",
+      link: {
+        label: "comparapix.ar",
+        href: "https://comparapix.ar/",
       },
     },
     {
