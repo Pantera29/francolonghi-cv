@@ -40,37 +40,6 @@ export function CafecitoDonations() {
             <div className="space-y-8">
               <div>
                 <h3 className="font-semibold mb-4 text-gray-800 dark:text-gray-100 transition-colors duration-200">
-                  {DONATION_DATA.crypto.title} - {DONATION_DATA.crypto.subtitle}
-                </h3>
-                
-                <div className="space-y-4">
-                  {DONATION_DATA.crypto.addresses.map((crypto) => (
-                    <div key={crypto.name} className="rounded-lg bg-white dark:bg-gray-700/50 p-4 transition-colors duration-200">
-                      <p className="font-medium text-gray-700 dark:text-gray-200 mb-2 transition-colors duration-200">{crypto.name}:</p>
-                      <div className="flex gap-2 items-center">
-                        <code className="flex-1 block bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-3 rounded-md text-sm break-all border border-gray-200 dark:border-gray-600 transition-all duration-200">
-                          {crypto.address}
-                        </code>
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          onClick={() => handleCopy(crypto.address)}
-                          className="shrink-0 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
-                        >
-                          <Copy className={`h-4 w-4 ${
-                            copiedAddress === crypto.address 
-                              ? 'text-green-500 dark:text-green-400' 
-                              : 'text-gray-500 dark:text-gray-400'
-                          } transition-colors duration-200`} />
-                        </Button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold mb-4 text-gray-800 dark:text-gray-100 transition-colors duration-200">
                   Pesos
                 </h3>
                 
@@ -116,6 +85,37 @@ export function CafecitoDonations() {
                       </Button>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-4 text-gray-800 dark:text-gray-100 transition-colors duration-200">
+                  {DONATION_DATA.crypto.title} - {DONATION_DATA.crypto.subtitle}
+                </h3>
+                
+                <div className="space-y-4">
+                  {DONATION_DATA.crypto.addresses.map((crypto) => (
+                    <div key={crypto.name} className="rounded-lg bg-white dark:bg-gray-700/50 p-4 transition-colors duration-200">
+                      <p className="font-medium text-gray-700 dark:text-gray-200 mb-2 transition-colors duration-200">{crypto.name}:</p>
+                      <div className="flex gap-2 items-center">
+                        <code className="flex-1 block bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-3 rounded-md text-sm break-all border border-gray-200 dark:border-gray-600 transition-all duration-200">
+                          {crypto.address}
+                        </code>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          onClick={() => handleCopy(crypto.address)}
+                          className="shrink-0 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+                        >
+                          <Copy className={`h-4 w-4 ${
+                            copiedAddress === crypto.address 
+                              ? 'text-green-500 dark:text-green-400' 
+                              : 'text-gray-500 dark:text-gray-400'
+                          } transition-colors duration-200`} />
+                        </Button>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
