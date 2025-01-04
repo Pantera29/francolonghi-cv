@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 import "./globals.css";
 import React from "react";
@@ -23,6 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
+      <head>
+      <script src="https://analytics.ahrefs.com/analytics.js" data-key="sxNRUvsypYdcdk/GmZTvFg" async></script>
+      </head>
       <body>{children}</body>
       <Analytics />
     </html>
