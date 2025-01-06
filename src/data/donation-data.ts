@@ -5,7 +5,11 @@ export const DONATION_DATA = {
     addresses: [
       {
         name: "Bitcoin",
-        address: "bc1q6mvxm72yrxms63egmtzlqedd6qw4fpyuffhmt0"
+        address: "bc1q7hscf0lnvsnlal7p43n8dyxsx5hmvejcz9l95g"
+      },
+      {
+        name: "Lightning",
+        address: "ferminrp@walletofsatoshi.com"
       },
       {
         name: "Arbitrum",
