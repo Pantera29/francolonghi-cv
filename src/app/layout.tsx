@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { ClarityAnalytics } from "@/components/ClarityAnalytics";
 
 import "./globals.css";
 import React from "react";
@@ -27,7 +28,10 @@ export default function RootLayout({
       <head>
       <script src="https://analytics.ahrefs.com/analytics.js" data-key="sxNRUvsypYdcdk/GmZTvFg" async></script>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <ClarityAnalytics />
+      </body>
       <Analytics />
     </html>
   );
