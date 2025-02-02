@@ -24,7 +24,7 @@ export const DONATION_DATA = {
         address: "0x75b9d2b9c2d4e03b6bfa384ed8156ecba6c7d26f"
       },
       {
-        name: "Polygon",
+        name: "BnB",
         address: "0x75b9d2b9c2d4e03b6bfa384ed8156ecba6c7d26f"
       },
       {
