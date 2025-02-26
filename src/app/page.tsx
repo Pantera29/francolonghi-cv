@@ -7,6 +7,7 @@ import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
+import { WhatsAppIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -45,6 +46,30 @@ export default function Page() {
                     <MailIcon className="h-4 w-4" />
                   </a>
                 </Button>
+              ) : null}
+              {RESUME_DATA.contact.tel ? (
+                <>
+                  <Button
+                    className="h-8 w-8"
+                    variant="outline"
+                    size="icon"
+                    asChild
+                  >
+                    <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                      <PhoneIcon className="h-4 w-4" />
+                    </a>
+                  </Button>
+                  <Button
+                    className="h-8 w-8"
+                    variant="outline"
+                    size="icon"
+                    asChild
+                  >
+                    <a href={`https://wa.me/${RESUME_DATA.contact.tel.replace(/\+/g, '')}`} target="_blank">
+                      <WhatsAppIcon className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </>
               ) : null}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button

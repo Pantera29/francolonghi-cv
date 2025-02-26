@@ -8,7 +8,7 @@ export const RESUME_DATA = {
   about: "Building fintech products. At established companies and startups.",
   summary: "Over 7 years creating fintech products across Latin America. From lending platforms in Argentina to alternative payment methods in Mexico. Throughout my journey, I've learned to combine economic analysis, business strategy, and product development to transform ideas into solutions that generate value for millions of users.",
   avatarUrl: "https://media.licdn.com/dms/image/v2/C4E03AQGFBfOlDIJF7A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1560955418191?e=1746057600&v=beta&t=AIsWV7e2kI4XYg3yhOvJzHlhXsHYIBBqc67SD-hO--w",
-  personalWebsiteUrl: "",
+  personalWebsiteUrl: "https://francolonghi-cv.vercel.app/",
   contact: {
     email: "francolonghi29@gmail.com",
     tel: "+525575131257",
@@ -75,10 +75,20 @@ export const RESUME_DATA = {
       description: "Responsible for product development for Kavak Argentina, focused on optimizing business processes and user experience during the company's regional expansion."
     },
     {
-      company: "Adelantos.com (Ixpandit Fintech Factory)",
-      link: "https://adelantos.com",
+      company: "Ixpandit Fintech Factory",
+      link: "https://ixpandit.com/",
       badges: ["Fintech", "Lending"],
-      title: "Product Lead",
+      title: "Product Lead - Adelantos.com",
+      logo: "/logos/adelantos.png", // Add logo URL
+      start: "Jul 2018",
+      end: "Jun 2020",
+      description: "Led the design and implementation of product strategy, covering commercial areas, marketing, pricing, and UX. Optimized operational metrics and performed financial analysis, contributing to the sustained growth of the online lending business."
+    },
+    {
+      company: "Ixpandit Fintech Factory",
+      link: "https://ixpandit.com/",
+      badges: ["Fintech", "Lending"],
+      title: "Product Owner - Grouit.com",
       logo: "/logos/adelantos.png", // Add logo URL
       start: "Jul 2018",
       end: "Jun 2020",
@@ -89,6 +99,26 @@ export const RESUME_DATA = {
       link: "https://www.crisil.com",
       badges: ["Research", "Private Equity"],
       title: "Private Equity Research Analyst",
+      logo: "/logos/crisil.png", // Add logo URL
+      start: "Aug 2016",
+      end: "Oct 2017",
+      description: "Developed market reports and fintech industry analysis, presenting over 500 companies to investment fund analysts. Created daily newsletters with information on the financial and banking sector."
+    },
+    {
+      company: "Universidad Torcuato Di Tella",
+      link: "https://www.utdt.edu/",
+      badges: ["Teaching", "Economics"],
+      title: "Teaching Assistant",
+      logo: "/logos/crisil.png", // Add logo URL
+      start: "Aug 2016",
+      end: "Oct 2017",
+      description: "Developed market reports and fintech industry analysis, presenting over 500 companies to investment fund analysts. Created daily newsletters with information on the financial and banking sector."
+    },
+    {
+      company: "US Embassy in Argentina",
+      link: "https://ar.usembassy.gov/es/",
+      badges: ["Trainee", "Economics"],
+      title: "Economic Intern",
       logo: "/logos/crisil.png", // Add logo URL
       start: "Aug 2016",
       end: "Oct 2017",
