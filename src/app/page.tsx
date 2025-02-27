@@ -8,6 +8,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { WhatsAppIcon } from "@/components/icons";
+import { WorkExperience } from "@/types";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -113,6 +114,13 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      {work.logo && (
+                        <img 
+                          src={work.logo} 
+                          alt={`${work.company} logo`} 
+                          className="h-6 w-6 rounded-full mr-2 object-contain bg-white border border-gray-200"
+                        />
+                      )}
                       <a className="hover:underline" href={work.link}>
                         {work.company}
                       </a>
@@ -129,7 +137,8 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-gray-500 flex items-center">
+                      {work.country === "México" ? "🇲🇽 " : "🇦🇷 "}
                       {work.start === work.end ? work.start : `${work.start} - ${work.end}`}
                     </div>
                   </div>
@@ -160,9 +169,18 @@ export default function Page() {
               <Card key={education.school}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
+                    <div className="flex items-center gap-x-2">
+                      {education.logo && (
+                        <img 
+                          src={education.logo} 
+                          alt={`${education.school} logo`}
+                          className="h-6 w-6 rounded-full mr-2 object-contain bg-white border border-gray-200" 
+                        />
+                      )}
+                      <h3 className="font-semibold leading-none">
+                        {education.school}
+                      </h3>
+                    </div>
                     <div className="text-sm tabular-nums text-gray-500">
                       {parseInt(education.start) === parseInt(education.end) 
                         ? education.start 
