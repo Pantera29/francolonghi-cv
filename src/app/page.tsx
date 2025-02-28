@@ -7,7 +7,7 @@ import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
-import { WhatsAppIcon } from "@/components/icons";
+import { WhatsAppIcon, MexicoFlagIcon, ArgentinaFlagIcon } from "@/components/icons";
 import { WorkExperience } from "@/types";
 
 export const metadata: Metadata = {
@@ -15,7 +15,77 @@ export const metadata: Metadata = {
   description: RESUME_DATA.summary,
 };
 
+// Función para agrupar trabajos por empresa
+const groupWorkByCompany = (workExperiences: WorkExperience[]) => {
+  const groupedWork = workExperiences.reduce((acc, work) => {
+    if (!acc[work.company]) {
+      acc[work.company] = {
+        company: work.company,
+        link: work.link,
+        logo: work.logo,
+        badges: work.badges,
+        roles: [],
+        startYear: parseInt(work.start),
+        endYear: work.end === "Present" ? new Date().getFullYear() : parseInt(work.end),
+      };
+    }
+    
+    // Combinar badges únicos
+    work.badges.forEach(badge => {
+      if (!acc[work.company].badges.includes(badge)) {
+        acc[work.company].badges.push(badge);
+      }
+    });
+    
+    // Actualizar años si es necesario
+    const startYear = parseInt(work.start);
+    const endYear = work.end === "Present" ? new Date().getFullYear() : parseInt(work.end);
+    
+    if (startYear < acc[work.company].startYear) {
+      acc[work.company].startYear = startYear;
+    }
+    
+    if (endYear > acc[work.company].endYear) {
+      acc[work.company].endYear = endYear;
+    }
+    
+    // Agregar el rol actual
+    acc[work.company].roles.push(work);
+    
+    return acc;
+  }, {} as Record<string, {
+    company: string;
+    link: string;
+    logo?: string;
+    badges: string[];
+    roles: WorkExperience[];
+    startYear: number;
+    endYear: number;
+  }>);
+  
+  // Convertir el objeto a un array y ordenar por año de finalización (más reciente primero)
+  return Object.values(groupedWork).sort((a, b) => b.endYear - a.endYear);
+};
+
+// Función para ordenar roles dentro de una empresa (más reciente primero)
+const sortRolesByDate = (roles: WorkExperience[]) => {
+  return [...roles].sort((a, b) => {
+    const endA = a.end === "Present" ? new Date().getFullYear() : parseInt(a.end);
+    const endB = b.end === "Present" ? new Date().getFullYear() : parseInt(b.end);
+    
+    if (endA !== endB) {
+      return endB - endA; // Ordenar por año de finalización (descendente)
+    }
+    
+    // Si los años de finalización son iguales, ordenar por año de inicio (descendente)
+    return parseInt(b.start) - parseInt(a.start);
+  });
+};
+
 export default function Page() {
+  // Agrupar trabajos por empresa
+  const groupedWork = groupWorkByCompany(RESUME_DATA.work);
+  
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
@@ -108,25 +178,27 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
-          {RESUME_DATA.work.map((work) => {
+          {groupedWork.map((companyGroup) => {
+            const sortedRoles = sortRolesByDate(companyGroup.roles);
+            
             return (
-              <Card key={work.company}>
-                <CardHeader>
+              <Card key={companyGroup.company} className="mb-4 print:break-inside-avoid">
+                <CardHeader className="pb-2">
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      {work.logo && (
+                      {companyGroup.logo && (
                         <img 
-                          src={work.logo} 
-                          alt={`${work.company} logo`} 
-                          className="h-6 w-6 rounded-full mr-2 object-contain bg-white border border-gray-200"
+                          src={companyGroup.logo} 
+                          alt={`${companyGroup.company} logo`} 
+                          className="h-7 w-7 rounded-full mr-2 object-contain bg-white border border-gray-200"
                         />
                       )}
-                      <a className="hover:underline" href={work.link}>
-                        {work.company}
+                      <a className="hover:underline text-gray-900" href={companyGroup.link}>
+                        {companyGroup.company}
                       </a>
 
-                      <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
+                      <span className="inline-flex gap-x-1 ml-2">
+                        {companyGroup.badges.map((badge) => (
                           <Badge
                             variant="secondary"
                             className="align-middle text-xs"
@@ -137,26 +209,45 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500 flex items-center">
-                      {work.country === "México" ? "🇲🇽 " : "🇦🇷 "}
-                      {work.start === work.end ? work.start : `${work.start} - ${work.end}`}
+                    <div className="text-sm tabular-nums text-gray-500 font-medium">
+                      {companyGroup.startYear === companyGroup.endYear 
+                        ? companyGroup.startYear 
+                        : `${companyGroup.startYear} - ${companyGroup.endYear === new Date().getFullYear() ? "Present" : companyGroup.endYear}`}
                     </div>
                   </div>
-
-                  <h4 className="font-mono text-sm leading-none">
-                    {work.title}
-                  </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {Array.isArray(work.description) ? (
-                    work.description.map((paragraph, index) => (
-                      <p key={index} className="mb-2">
-                        {paragraph}
-                      </p>
-                    ))
-                  ) : (
-                    <p>{work.description}</p>
-                  )}
+                
+                <CardContent className="pb-2">
+                  {sortedRoles.map((role, index) => (
+                    <div 
+                      key={`${role.company}-${role.title}`} 
+                      className={`pt-2 ${index !== 0 ? "border-t border-gray-50 mt-3" : ""}`}
+                    >
+                      <div className="flex items-center justify-between gap-x-2 mb-1">
+                        <h4 className="font-mono text-sm leading-tight text-gray-700">
+                          {role.title}
+                        </h4>
+                        <div className="text-xs tabular-nums text-gray-400 flex items-center">
+                          {role.country === "México" ? 
+                            <MexicoFlagIcon className="h-3 w-4 mr-1 opacity-80" /> : 
+                            <ArgentinaFlagIcon className="h-3 w-4 mr-1 opacity-80" />
+                          }
+                          {role.start === role.end ? role.start : `${role.start} - ${role.end}`}
+                        </div>
+                      </div>
+                      <div className="text-xs text-muted-foreground mt-1">
+                        {Array.isArray(role.description) ? (
+                          role.description.map((paragraph, idx) => (
+                            <p key={idx} className="mb-2">
+                              {paragraph}
+                            </p>
+                          ))
+                        ) : (
+                          <p>{role.description}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </CardContent>
               </Card>
             );
@@ -166,7 +257,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">Education</h2>
           {RESUME_DATA.education.map((education) => {
             return (
-              <Card key={education.school}>
+              <Card key={education.school} className="print:break-inside-avoid">
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <div className="flex items-center gap-x-2">

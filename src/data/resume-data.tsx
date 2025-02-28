@@ -59,7 +59,7 @@ export const RESUME_DATA: ResumeData = {
       start: "2024",
       end: "Present",
       country: "México",
-      description: "Leading the development of alternative payment methods for one of Mexico's most important payment processors, providing solutions for thousands of e-commerce businesses across the region."
+      description: "Leading alternative payment methods including transfers, cash, BNPL, pay-by-bank, and digital wallets for thousands of merchants in Mexico."
     },
     {
       company: "Kuna Capital",
@@ -70,7 +70,7 @@ export const RESUME_DATA: ResumeData = {
       start: "2023",
       end: "2024",
       country: "México",
-      description: "Designed and launched financial products for the Mexican market, focused on democratizing access to financial services for individuals and businesses."
+      description: "Led the product development for our dealership product, scaling to 500+ monthly loans in under a year with presence in hundreds of dealerships."
     },
     {
       company: "Kavak",
@@ -81,7 +81,7 @@ export const RESUME_DATA: ResumeData = {
       start: "2022",
       end: "2023",
       country: "México",
-      description: "Led key product initiatives at Latin America's first used car marketplace unicorn, improving the financing and payment experience for users in Mexico."
+      description: "Led backoffice teams implementing in-house platforms that reduced approval decision, contract issuance and operational processes by 90%."
     },
     {
       company: "Kavak",
@@ -92,7 +92,7 @@ export const RESUME_DATA: ResumeData = {
       start: "2020",
       end: "2022",
       country: "Argentina",
-      description: "Responsible for product development for Kavak Argentina, focused on optimizing business processes and user experience during the company's regional expansion."
+      description: "Built the end-to-end financing experience in Mexico, achieving over 75% adoption rate."
     },
     {
       company: "Kavak",
@@ -103,29 +103,29 @@ export const RESUME_DATA: ResumeData = {
       start: "2020",
       end: "2020",
       country: "Argentina",
-      description: "Responsible for product development for Kavak Argentina, focused on optimizing business processes and user experience during the company's regional expansion."
+      description: "Managed Checkars' e-commerce (later acquired by Kavak), implementing features that increased financing penetration from 2% to 10%."
     },
     {
       company: "Ixpandit Fintech Factory",
       link: "https://ixpandit.com/",
-      badges: ["Fintech - Lending B2C"],
-      title: "Product Lead - Adelantos.com",
+      badges: ["Fintech - Lending B2B & B2C"],
+      title: "Product Manager - Adelantos.com",
       logo: "https://media.licdn.com/dms/image/v2/D4D0BAQHosIiRVHQ8MQ/company-logo_200_200/company-logo_200_200/0/1734709695794/ixpandit_fintech_group_logo?e=1748476800&v=beta&t=jS111DRkv9IkFMc3xmdCukWOFtXkYrX0wbVi1qbzf8g",
       start: "2018",
       end: "2020",
       country: "Argentina",
-      description: "Led the design and implementation of product strategy, covering commercial areas, marketing, pricing, and UX. Optimized operational metrics and performed financial analysis, contributing to the sustained growth of the online lending business."
+      description: "Led product strategy and development from conception to scaling to thousands of monthly loans."
     },
     {
       company: "Ixpandit Fintech Factory",
       link: "https://ixpandit.com/",
-      badges: ["Fintech - Lending B2B"],
-      title: "Product Owner - Grouit.com",
+      badges: ["Fintech - Lending B2B & B2C"],
+      title: "Business Analyst - Grouit.com",
       logo: "https://media.licdn.com/dms/image/v2/D4D0BAQHosIiRVHQ8MQ/company-logo_200_200/company-logo_200_200/0/1734709695794/ixpandit_fintech_group_logo?e=1748476800&v=beta&t=jS111DRkv9IkFMc3xmdCukWOFtXkYrX0wbVi1qbzf8g",
       start: "2017",
       end: "2018",
       country: "Argentina",
-      description: "Led the design and implementation of product strategy, covering commercial areas, marketing, pricing, and UX. Optimized operational metrics and performed financial analysis, contributing to the sustained growth of the online lending business."
+      description: "Enhanced operational processes and implemented system improvements to optimize the lending platform."
     },
     {
       company: "CRISIL Argentina",
@@ -136,7 +136,7 @@ export const RESUME_DATA: ResumeData = {
       start: "2016",
       end: "2017",
       country: "Argentina",
-      description: "Developed market reports and fintech industry analysis, presenting over 500 companies to investment fund analysts. Created daily newsletters with information on the financial and banking sector."
+      description: "Developed market reports and fintech industry analysis, presenting over 500 companies to investment fund analysts."
     },
     {
       company: "Universidad Torcuato Di Tella",
@@ -147,7 +147,7 @@ export const RESUME_DATA: ResumeData = {
       start: "2016",
       end: "2017",
       country: "Argentina",
-      description: "Developed market reports and fintech industry analysis, presenting over 500 companies to investment fund analysts. Created daily newsletters with information on the financial and banking sector."
+      description: "Taught Economics 101 to freshman students, developing course materials and providing academic guidance."
     },
     {
       company: "US Embassy in Argentina",
@@ -158,7 +158,7 @@ export const RESUME_DATA: ResumeData = {
       start: "2016",
       end: "2017",
       country: "Argentina",
-      description: "Developed market reports and fintech industry analysis, presenting over 500 companies to investment fund analysts. Created daily newsletters with information on the financial and banking sector."
+      description: "Produced macroeconomic analysis newsletters and researched foreign debt while building fintech sector connections."
     }
   ],
   skills: [
