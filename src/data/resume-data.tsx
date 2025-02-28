@@ -7,7 +7,7 @@ export const RESUME_DATA: ResumeData = {
   location: "Mexico City, Mexico",
   locationLink: "https://www.google.com/maps/place/Mexico+City",
   about: "Building fintech products. At established companies and startups.",
-  summary: "Over 7 years creating fintech products across Latin America. From lending platforms in Argentina to alternative payment methods in Mexico. Throughout my journey, I've learned to combine economic analysis, business strategy, and product development to transform ideas into solutions that generate value for millions of users.",
+  summary: "Over 7 years creating fintech products across Latin America. From lending platforms in Argentina to alternative payment methods in Mexico. Throughout my journey, I've learned to combine economic analysis, business strategy, and product development to transform ideas into solutions that generate value for thousands of users.",
   avatarUrl: "https://media.licdn.com/dms/image/v2/C4E03AQGFBfOlDIJF7A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1560955418191?e=1746057600&v=beta&t=AIsWV7e2kI4XYg3yhOvJzHlhXsHYIBBqc67SD-hO--w",
   personalWebsiteUrl: "https://francolonghi-cv.vercel.app/",
   contact: {
