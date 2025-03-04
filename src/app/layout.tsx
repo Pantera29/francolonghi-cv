@@ -11,12 +11,7 @@ export const metadata: Metadata = {
   title: "Franco Longhi | CV",
   description: "Building fintech products. At established companies and startups.",
   icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "any"
-      }
-    ]
+    icon: "/favicon.jpg"
   }
 };
 

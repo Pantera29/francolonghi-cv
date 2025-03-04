@@ -292,6 +292,40 @@ export default function Page() {
             })}
           </div>
         </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Personal Projects</h2>
+          <div className="flex flex-col gap-4">
+            {RESUME_DATA.projects.map((project) => (
+              <Card key={project.title}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="font-semibold leading-none flex items-center gap-2">
+                      <div className="flex items-center gap-2">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        <a href={project.url} target="_blank" className="hover:underline">
+                          {project.title}
+                        </a>
+                      </div>
+                    </h3>
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2">
+                  <p className="text-sm text-muted-foreground mb-3">{project.description}</p>
+                  <div className="flex flex-wrap gap-1">
+                    {project.technologies.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </Section>
       </section>
 
       <CommandMenu

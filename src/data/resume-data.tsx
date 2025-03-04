@@ -173,4 +173,12 @@ export const RESUME_DATA: ResumeData = {
     "UX Design",
     "Data Analytics"
   ],
+  projects: [
+    {
+      title: "CV Optimizer",
+      description: "Una herramienta de IA que ayuda a optimizar y mejorar currículums vitae, proporcionando sugerencias personalizadas para destacar mejor la experiencia profesional.",
+      url: "https://cv-optimizer-blue.vercel.app/",
+      technologies: ["Next.js", "OpenAI API", "Tailwind CSS", "TypeScript"]
+    }
+  ]
 } as const;

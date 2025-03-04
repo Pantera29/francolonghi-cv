@@ -6,6 +6,13 @@ export interface Social {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
+export interface Project {
+  title: string;
+  description: string;
+  url: string;
+  technologies: string[];
+}
+
 export interface Education {
   school: string;
   degree: string;
@@ -43,4 +50,5 @@ export interface ResumeData {
   education: Education[];
   work: WorkExperience[];
   skills: string[];
+  projects: Project[];
 } 
