@@ -176,7 +176,7 @@ export const RESUME_DATA: ResumeData = {
   projects: [
     {
       title: "CV Optimizer",
-      description: "Una herramienta de IA que ayuda a optimizar y mejorar currículums vitae, proporcionando sugerencias personalizadas para destacar mejor la experiencia profesional.",
+      description: "An AI tool that helps optimize and improve resumes, providing personalized suggestions to better highlight professional experience.",
       url: "https://cv-optimizer-blue.vercel.app/",
       technologies: ["Next.js", "OpenAI API", "Tailwind CSS", "TypeScript"]
     }
