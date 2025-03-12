@@ -179,6 +179,12 @@ export const RESUME_DATA: ResumeData = {
       description: "An AI tool that helps optimize and improve resumes, providing personalized suggestions to better highlight professional experience.",
       url: "https://cv-optimizer-blue.vercel.app/",
       technologies: ["Next.js", "OpenAI API", "Tailwind CSS", "TypeScript"]
+    },
+    {
+      title: "Car Alerts",
+      description: "A web app that allows users to track car prices and alerts them when the price drops below a certain threshold.",
+      url: "https://caralerts.vercel.app/",
+      technologies: ["Tailwind CSS", "Cloudflare D1", "Cloudflare Workers"]
     }
   ]
 } as const;
