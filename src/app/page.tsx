@@ -11,7 +11,7 @@ import { WhatsAppIcon, MexicoFlagIcon, ArgentinaFlagIcon } from "@/components/ic
 import { WorkExperience } from "@/types";
 
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+  title: `${RESUME_DATA.name} | Product & AI`,
   description: RESUME_DATA.summary,
 };
 
@@ -24,6 +24,7 @@ const groupWorkByCompany = (workExperiences: WorkExperience[]) => {
         link: work.link,
         logo: work.logo,
         badges: work.badges,
+        companyDescription: work.companyDescription,
         roles: [],
         startYear: parseInt(work.start),
         endYear: work.end === "Present" ? new Date().getFullYear() : parseInt(work.end),
@@ -58,6 +59,7 @@ const groupWorkByCompany = (workExperiences: WorkExperience[]) => {
     link: string;
     logo?: string;
     badges: string[];
+    companyDescription?: string;
     roles: WorkExperience[];
     startYear: number;
     endYear: number;
@@ -92,9 +94,6 @@ export default function Page() {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.about}
-            </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
@@ -215,6 +214,11 @@ export default function Page() {
                         : `${companyGroup.startYear} - ${companyGroup.endYear === new Date().getFullYear() ? "Present" : companyGroup.endYear}`}
                     </div>
                   </div>
+                  {companyGroup.companyDescription && (
+                    <p className="text-xs text-muted-foreground mt-1 font-mono italic">
+                      {companyGroup.companyDescription}
+                    </p>
+                  )}
                 </CardHeader>
                 
                 <CardContent className="pb-2">
@@ -237,11 +241,16 @@ export default function Page() {
                       </div>
                       <div className="text-xs text-muted-foreground mt-1">
                         {Array.isArray(role.description) ? (
-                          role.description.map((paragraph, idx) => (
-                            <p key={idx} className="mb-2">
-                              {paragraph}
-                            </p>
-                          ))
+                          <>
+                            <p className="mb-2">{role.description[0]}</p>
+                            {role.description.length > 1 && (
+                              <ul className="list-disc pl-5">
+                                {role.description.slice(1).map((item, idx) => (
+                                  <li key={idx} className="mb-1 font-mono text-xs">{item}</li>
+                                ))}
+                              </ul>
+                            )}
+                          </>
                         ) : (
                           <p>{role.description}</p>
                         )}

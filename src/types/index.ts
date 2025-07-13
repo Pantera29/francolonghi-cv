@@ -30,6 +30,7 @@ export interface WorkExperience {
   start: string;
   end: string;
   country: string;
+  companyDescription?: string;
   description: string | string[];
 }
 
@@ -38,7 +39,7 @@ export interface ResumeData {
   initials: string;
   location: string;
   locationLink: string;
-  about: string;
+  about?: string;
   summary: string;
   avatarUrl: string;
   personalWebsiteUrl: string;
